@@ -77,14 +77,18 @@
       color: white;
       cursor: pointer;
     }
-/* Mini Search Container */
+
+
+
+    /* Mini Search Container */
 .mini_search_contain {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #1e7a8c; /* Darker, more sophisticated teal */
   width: 100%;
-  padding: 5px 0; /* Increased padding for a more spacious look */
+  padding: 12px 0;
+  box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
 }
 
 /* Mini Search Bar */
@@ -93,11 +97,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: 100%; /* Take full width of the container */
+  max-width: 500px; /* Limit the maximum width to keep it from expanding too much */
   margin: 5px 10px;
-  border-radius: 25px; /* More rounded for a softer look */
-  padding: 8px 15px; /* Increased padding inside the search bar */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 25px;
+  padding: 8px 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
 }
 
 /* Search Input */
@@ -106,26 +112,33 @@
   border: none;
   outline: none;
   flex-grow: 1; /* Allows the input to take up more space */
-
-  font-family: 'Inter', sans-serif; /* Modern, clean font */
-  color: #333; /* Darker text color for contrast */
+ 
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
 }
 
 /* Search Icon Container */
 .search_icon_container {
-
-  background-color: #1e7a8c; /* Matches the container background */
-
- 
-  cursor: pointer; /* Indicate the icon is clickable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e7a8c;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Ensure smooth transition */
 }
 
 /* Search Icon */
-
+.search_icon {
+  color: white;
+  font-size: 20px;
+}
 
 /* Hover Effects */
-.search_icon_container {
-  background-color: #3f595c; /* Slightly darker shade on hover */
+.search_icon_container:hover {
+  background-color: #145961; /* Slightly darker shade on hover */
 }
 
 
