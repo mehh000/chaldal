@@ -48,6 +48,10 @@
     color: white;
     font-size: 24px;
   }
+
+  .mini_search_contain{
+    display: none;
+  }
   
   /* Hide all elements except the menu icon on small screens */
   @media (max-width: 568px) {
@@ -73,6 +77,58 @@
       color: white;
       cursor: pointer;
     }
+/* Mini Search Container */
+.mini_search_contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e7a8c; /* Darker, more sophisticated teal */
+  width: 100%;
+  padding: 5px 0; /* Increased padding for a more spacious look */
+}
+
+/* Mini Search Bar */
+.mini_search {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 5px 10px;
+  border-radius: 25px; /* More rounded for a softer look */
+  padding: 8px 15px; /* Increased padding inside the search bar */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Search Input */
+.search_input {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  flex-grow: 1; /* Allows the input to take up more space */
+
+  font-family: 'Inter', sans-serif; /* Modern, clean font */
+  color: #333; /* Darker text color for contrast */
+}
+
+/* Search Icon Container */
+.search_icon_container {
+
+  background-color: #1e7a8c; /* Matches the container background */
+
+ 
+  cursor: pointer; /* Indicate the icon is clickable */
+}
+
+/* Search Icon */
+
+
+/* Hover Effects */
+.search_icon_container {
+  background-color: #3f595c; /* Slightly darker shade on hover */
+}
+
+
   }
   
   /* Full-screen menu overlay for small screens */

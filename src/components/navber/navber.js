@@ -8,7 +8,7 @@ import { FaShoppingCart, FaUserAlt, FaSearch, FaBars } from 'react-icons/fa';
 export default function Navber() {
 
   return (
-    
+    <>
     <div className={cl.navbox}>
     <div className={cl.container}>
       {/* Logo and Name */}
@@ -34,6 +34,21 @@ export default function Navber() {
      
     </div>
     
-     </div>
+     </div>  
+     {/* mini search ber */}
+
+     <div className={cl.mini_search_contain}>
+      <div className={cl.mini_search}>
+        <input 
+          className={cl.search_input} 
+          placeholder='Search anything...' 
+        />
+        <div className={cl.search_icon_container}>
+          <FaSearch className={cl.search_icon} />  
+        </div>
+      </div>
+    </div>
+     
+      </>
   );
 }
