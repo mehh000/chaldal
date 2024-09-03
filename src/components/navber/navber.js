@@ -3,6 +3,7 @@
 
 import cl from './Navber.module.css'
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaShoppingCart, FaUserAlt, FaSearch, FaBars } from 'react-icons/fa';
 
 export default function Navber() {
@@ -12,23 +13,27 @@ export default function Navber() {
     <div className={cl.navbox}>
     <div className={cl.container}>
       {/* Logo and Name */}
+      <Link href={'/'}>
       <div className={cl.logo_container}>
         <Image src="/logo.png" height={50} width={50} alt="Chaldal Logo" />
         <span className={cl.logo_name}>Chaldals</span>
       </div>
-
+ </Link>
       {/* Main Menu */}
       <div className={cl.menu_container}>
-        <a href="#home">Home</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#discounts">Discounts</a>
+        <Link href="/">Homee</Link>
+        <Link href="#contact">Contact Us</Link>
+        <Link href="#discounts">Discounts</Link>
       </div>
 
       {/* Icons */}
       <div className={cl.icon_container}>
+          <FaSearch />
         <FaShoppingCart />
+       <Link href={'./login'}  >
         <FaUserAlt />
-        <FaSearch />
+       </Link>
+      
       </div>
 
      

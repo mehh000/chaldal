@@ -1,0 +1,132 @@
+/* Centering the login container */
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Styling the login box */
+  .login_box {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form and input field styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input_field {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .input_field:focus {
+    border-color: #28a745; /* Highlight color on focus */
+  }
+  
+  /* Login button styling */
+  .login_button {
+    padding: 12px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .login_button:hover {
+    background-color: #218838;
+  }
+  
+  /* Divider */
+  .divider {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Google login button styling */
+  .google_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    background-color: #db4437;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .google_login:hover {
+    background-color: #c23321;
+  }
+  
+  /* Google icon styling */
+  .google_icon {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  /* Register link styling */
+  .register_link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .register_link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register_link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 480px) {
+    .login_box {
+      padding: 30px 20px;
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  
+    .input_field,
+    .login_button,
+    .google_login {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  }
+  
