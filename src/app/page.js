@@ -1,6 +1,4 @@
 
-
-import Navber from '@/components/navber/navber'
 import React from 'react'
 
 
