@@ -1,0 +1,108 @@
+
+.navbox{
+
+}
+/* Container for the navbar */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #289ca7; /* Green color for a premium look */
+    position: relative;
+  }
+  
+  /* Logo and name container */
+  .logo_container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo_name {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Menu and icons container */
+  .menu_container,
+  .icon_container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Menu links */
+  .menu_container a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Icon styles */
+  .icon_container svg {
+    margin: 0 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+  }
+  
+  /* Hide all elements except the menu icon on small screens */
+  @media (max-width: 568px) {
+
+
+    .navbox{
+       display: none;
+       background-color: aliceblue;
+    }
+    .container {
+      justify-content: flex-end;
+    }
+  
+    .menu_container,
+    .logo_container,
+    .icon_container {
+      display: none;
+    }
+  
+    .menu_icon {
+      display: block;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  
+  /* Full-screen menu overlay for small screens */
+  .full_screen_menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .full_screen_menu.show {
+    display: flex;
+  }
+  
+  .full_screen_menu a {
+    color: white;
+    font-size: 24px;
+    margin: 15px 0;
+    text-decoration: none;
+  }
+  
+  /* Hide the menu icon by default */
+  .menu_icon {
+    display: none;
+  }
+  
