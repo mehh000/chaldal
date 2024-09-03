@@ -5,7 +5,7 @@ import cl from './Navber.module.css';
 import Image from 'next/image';
 import { FaShoppingCart, FaUserAlt, FaSearch, FaBars } from 'react-icons/fa';
 
-export default function navber() {
+export default function Navber() {
 
   return (
     
