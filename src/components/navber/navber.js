@@ -1,7 +1,7 @@
 "use client"
 
 
-import cl from './Navber.module.css';
+import cl from './Navber.module.css'
 import Image from 'next/image';
 import { FaShoppingCart, FaUserAlt, FaSearch, FaBars } from 'react-icons/fa';
 

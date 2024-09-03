@@ -1,5 +1,5 @@
 import styles from './Mininav.module.css';
-import { FaHome, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaHome, FaShoppingCart, FaUser } from 'react-icons/fa';
 
 export default function Mininav() {
   return (
