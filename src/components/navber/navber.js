@@ -15,7 +15,7 @@ export default function Navber() {
       {/* Logo and Name */}
       <Link href={'/'}>
       <div className={cl.logo_container}>
-        <Image src="/logo.png" height={50} width={50} alt="Chaldal Logo" />
+        <Image src="/logo.png" height={50} width={50} alt="Chaldal Logo"  />
         <span className={cl.logo_name}>Chaldals</span>
       </div>
  </Link>

@@ -1,0 +1,35 @@
+.sliderHeroContainer {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .slide {
+   
+  }
+  
+  .slick-dots {
+    bottom: 10px; /* Adjust position as needed */
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px; /* Adjust dot size as needed */
+    color: #fff; /* Dot color */
+  }
+  
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
+  
+  .slick-prev {
+    left: 10px; /* Adjust position as needed */
+    font-size: 24px;
+    color: #fff; /* Arrow color */
+  }
+  
+  .slick-next {
+    right: 10px; /* Adjust position as needed */
+    font-size: 24px;
+    color: #fff; /* Arrow color */
+  }
+  
