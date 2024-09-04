@@ -1,8 +1,7 @@
-
 import cl from './Navber.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaShoppingCart, FaUserAlt, FaSearch, FaBars } from 'react-icons/fa';
+import { FaShoppingCart, FaUserAlt, FaSearch } from 'react-icons/fa';
 
 export default function Navber() {
 
