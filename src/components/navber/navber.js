@@ -1,5 +1,3 @@
-"use client"
-
 
 import cl from './Navber.module.css'
 import Image from 'next/image';

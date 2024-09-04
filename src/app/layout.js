@@ -2,7 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Mininav from '@/components/movilenav/Mininav'
-import Navber from "@/components/navber/Navber";
+import Navber from '@/components/navber/Navber';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,11 +16,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="layout_container" >
+       
           <Navber />
            {children}
            <Mininav />
-        </div>
+      
        
         </body>
     </html>
