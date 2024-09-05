@@ -1,6 +1,7 @@
 import React from 'react';
 import cl from './style.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Card() {
   return (
@@ -12,11 +13,11 @@ function Card() {
       </div>
       
       <div className={cl.price_container}>
-        <p className={cl.price}>$170</p>
+        <p className={cl.price}>Taka 170</p>
         <p className={cl.discount}>10% off</p>
       </div>
       
-      <button className={cl.addtocart_btn}>Add to cart</button>
+    <Link href={'/product-detail'}><button className={cl.addtocart_btn}>Viwe to buy</button> </Link> 
     </div>
   );
 }

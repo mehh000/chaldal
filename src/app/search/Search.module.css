@@ -1,0 +1,132 @@
+.search_container {
+    padding: 20px;
+    position: relative;
+  }
+  
+  .search_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search_input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  .search_icon, .filter_icon {
+    background-color: #ff6b6b;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  
+  .side_drawer {
+    position: fixed;
+    top: 0;
+    right: -300px; /* This ensures it's fully off-screen */
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out; /* Smooth transition */
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto; /* In case content is long */
+  }
+  
+  .side_drawer.open {
+    right: 0; /* When opened, it slides in */
+  }
+  
+  .drawer_content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter_box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter_box h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .price_input_container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .price_input {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+  }
+  
+  .price_input label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .price_input input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .checkbox_container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .checkbox_container input {
+    margin-right: 10px;
+  }
+  
+  .checkbox_label {
+    font-size: 14px;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .search_input {
+      width: 200px;
+    }
+  
+    .side_drawer {
+      right: -80%; /* Make sure it's off-screen on smaller screens */
+      width: 80%;
+    }
+  
+    .side_drawer.open {
+      right: 0; /* Slides in fully on smaller screens too */
+    }
+  }
+  
