@@ -6,7 +6,7 @@ export default function Mininav() {
   return (
     <div className={styles.mininav_container}>
       <Link href={'/'}>   <FaHome className='text-4xl text-white' /></Link>
-      <Link href={'/'}>   <FaPerbyte className='text-4xl text-white' /></Link>
+      <Link href={'/categorymini'}>   <FaPerbyte className='text-4xl text-white' /></Link>
       <Link href={'/'}>   <FaHotjar className='text-4xl text-white' /></Link>
       <Link href={'/'}>  <FaShoppingCart className='text-4xl text-white' /></Link>
       <Link href={'/login'}>  <FaUser className='text-4xl text-white' /></Link>

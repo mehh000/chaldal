@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function Category() {
     return (
-        <div className={cl.conatiner}>
+       <div className={cl.conatiner}>
             <h2 className={cl.title} >All the Category</h2>
             <div className={cl.cetegory_Container}>
                 {/* card */}
