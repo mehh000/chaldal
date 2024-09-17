@@ -1,0 +1,162 @@
+/* Blog Home Styles */
+.blog_home {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .search_section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .search_input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .search_icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .main_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .blog_posts {
+    flex: 3;
+  }
+  
+  .blog_card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog_image img {
+    border-radius: 10px;
+  }
+  
+  .blog_details {
+    flex: 1;
+  }
+  
+  .blog_title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .blog_description {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .blog_meta {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
+  .blog_author {
+    font-weight: bold;
+  }
+  
+  .blog_date {
+    color: #999;
+  }
+  
+  /* Topics Section */
+  .topics {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .topics_heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .topics_list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .topics_list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .topics_list li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .topics_list li a:hover {
+    color: #ff6b6b;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .page_btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .page_number {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main_content {
+      flex-direction: column;
+    }
+  
+    .search_input {
+      max-width: 100%;
+    }
+  
+    .blog_card {
+      flex-direction: column;
+    }
+  
+    .topics {
+      margin-top: 20px;
+    }
+  }
+  

@@ -1,10 +1,14 @@
+'use client'
+
+
 import cl from './Navber.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaShoppingCart, FaUserAlt, FaSearch } from 'react-icons/fa';
+import { useAuth } from '@/Context/AuthProvider';
 
 export default function Navber() {
-
+  const { handleGetUser } = useAuth();
   return (
     <>
       <div className={cl.navbox}>
@@ -20,15 +24,15 @@ export default function Navber() {
           <div className={cl.menu_container}>
             <Link href="/">Home</Link>
             <Link href="contact-us">Contact Us</Link>
-            <Link href="#discounts">Discounts</Link>
+            <Link href="discount">Hot deals</Link>
             <Link href="#discounts">Health tips</Link>
           </div>
 
           {/* Icons */}
           <div className={cl.icon_container}>
             <Link href={'/search'}> <FaSearch /></Link>
-            <FaShoppingCart />
-            <Link href={'./login'}  >
+            <Link href={'/cart'}  >  <FaShoppingCart onClick={handleGetUser()} /></Link>
+            <Link href={'/login'}  >
               <FaUserAlt />
             </Link>
 

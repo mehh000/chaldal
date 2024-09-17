@@ -4,6 +4,7 @@ import "./globals.css";
 import Mininav from '@/components/movilenav/Mininav'
 import Navber from "@/components/webnav/Navber";
 import Footer from "@/components/footer/Footer";
+import { AuthProvider } from "@/Context/AuthProvider";
 
 
 
@@ -18,17 +19,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-       <div className="layout_container" >
-         <Navber />
-           {children}
-            <Footer />
-           <Mininav />
-          
-       </div>
-       
-      
-       
-        </body>
+        <AuthProvider>
+          <div className="layout_container" >
+           
+            {children}
+        
+          </div>
+        </AuthProvider>
+      </body>
     </html>
   );
 }

@@ -1,0 +1,80 @@
+.card_container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .image_wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .product_image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .hot_deal_message {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b6b9d;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 999;
+  }
+  
+  .card_info {
+    margin-top: 10px;
+  }
+  
+  .product_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .price_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .discount_price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .addtocartbtn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .card_container {
+      max-width: 100%;
+    }
+  }
+  

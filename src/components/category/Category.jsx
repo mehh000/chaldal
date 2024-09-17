@@ -9,19 +9,19 @@ function Category() {
             <div className={cl.cetegory_Container}>
                 {/* card */}
                 <div className={cl.cat_card}>
-                    <Image src={'/mlik.png'} height={150} width={150} alt='cat image' />
+                    <Image src={'/fruits.png'} height={150} width={150} alt='cat image' />
+                </div>        <div className={cl.cat_card}>
+                    <Image src={'/meat.png'} height={150} width={150} alt='cat image' />
                 </div>        <div className={cl.cat_card}>
                     <Image src={'/mlik.png'} height={150} width={150} alt='cat image' />
                 </div>        <div className={cl.cat_card}>
-                    <Image src={'/mlik.png'} height={150} width={150} alt='cat image' />
+                    <Image src={'/rice.png'} height={150} width={150} alt='cat image' />
                 </div>        <div className={cl.cat_card}>
-                    <Image src={'/mlik.png'} height={150} width={150} alt='cat image' />
+                    <Image src={'/snacks.png'} height={150} width={150} alt='cat image' />
                 </div>        <div className={cl.cat_card}>
-                    <Image src={'/mlik.png'} height={150} width={150} alt='cat image' />
+                    <Image src={'/vegetable.png'} height={150} width={150} alt='cat image' />
                 </div>        <div className={cl.cat_card}>
-                    <Image src={'/mlik.png'} height={150} width={150} alt='cat image' />
-                </div>        <div className={cl.cat_card}>
-                    <Image src={'/mlik.png'} height={150} width={150} alt='cat image' />
+                    <Image src={'/egg.png'} height={150} width={150} alt='cat image' />
                 </div>        <div className={cl.cat_card}>
                     <Image src={'/mlik.png'} height={150} width={150} alt='cat image' />
                 </div>

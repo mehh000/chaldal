@@ -7,9 +7,9 @@ export default function Mininav() {
     <div className={styles.mininav_container}>
       <Link href={'/'}>   <FaHome className='text-4xl text-white' /></Link>
       <Link href={'/categorymini'}>   <FaPerbyte className='text-4xl text-white' /></Link>
-      <Link href={'/'}>   <FaHotjar className='text-4xl text-white' /></Link>
-      <Link href={'/'}>  <FaShoppingCart className='text-4xl text-white' /></Link>
-      <Link href={'/login'}>  <FaUser className='text-4xl text-white' /></Link>
+      <Link href={'/discount'}>   <FaHotjar className='text-4xl text-white' /></Link>
+      <Link href={'/cart'}>  <FaShoppingCart className='text-4xl text-white' /></Link>
+      <Link href={'/mininav'}>  <FaUser className='text-4xl text-white' /></Link>
     </div>
   );
 }

@@ -30,7 +30,7 @@ const SliderHero = () => {
 
         </div>
         <div className={styles.slide}>
-        <Image src={'/bannertree.webp'} height={400} width={2024} layout="responsive" objectFit="cover" alt="Banner Image" />
+        <Image src={'/bannertwo.webp'} height={400} width={2024} layout="responsive" objectFit="cover" alt="Banner Image" />
         </div>
       </Slider>
     </div>

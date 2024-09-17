@@ -1,0 +1,135 @@
+/* Main container */
+.container {
+    width: 200px;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   
+    transition: transform 0.2s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Product Image */
+  .productImage {
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Product Name */
+  .productName {
+    font-size: 18px;
+    
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    
+  }
+  
+  /* Price Container */
+  .priceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Price */
+  .price {
+    font-size: 22px;
+    color: #28a745;
+    font-weight: 700;
+  }
+  
+  /* Discount Tag */
+  .discount {
+    font-size: 16px;
+    color: #ff6347;
+    background-color: #ffe8e5;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Discounted Price */
+  .discountPrice {
+    font-size: 18px;
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Action Buttons */
+  .actionContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Buttons */
+  .buyBtn, .editBtn, .deleteBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+  
+  .buyBtn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .buyBtn:hover {
+    background-color: #218838;
+  }
+  
+  .editBtn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .editBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .deleteBtn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .deleteBtn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .container {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .productName {
+      font-size: 16px;
+    }
+  
+    .price {
+      font-size: 20px;
+    }
+  
+    .discountPrice {
+      font-size: 16px;
+    }
+  }
+  
