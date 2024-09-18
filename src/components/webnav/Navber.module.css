@@ -30,6 +30,12 @@
   .icon_container {
     display: flex;
     align-items: center;
+   
+  }
+
+  .icon_container{
+    display: flex;
+    gap: 30px;
   }
   
   /* Menu links */
@@ -52,6 +58,87 @@
   .mini_search_contain{
     display: none;
   }
+
+  .user_icon{
+    background-color: #8BC34A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+  }
+  
+
+/* drop down menu */
+
+.menu_container {
+  position: relative;
+  display: inline-block; /* Ensure it's inline so the hover works across the container */
+}
+
+.noti_icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.drop_down {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 16px;
+  display: none;
+  z-index: 1000;
+}
+
+.menu_container:hover .drop_down,
+.drop_down:hover {
+  display: block;
+}
+
+.drop_down_menus {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drop_down_menu {
+  font-size: 16px;
+  color: #333;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.drop_down_menu:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+.cart_container{
+  position: relative;
+}
+.Cart_lenth{
+  position: absolute;
+  z-index: 5;
+ bottom: 3px;
+ left: 35px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  background: #c34a8b;
+  border-radius: 100px;
+  padding: 2px 5px;
+}
+
+
+
   
   /* Hide all elements except the menu icon on small screens */
   @media (max-width: 568px) {

@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import { auth, db } from '../../../db/firebase'; // Ensure Firebase is correctly initialized
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { redirect, useRouter  } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import cl from './Login.module.css'; // Importing your CSS module
 import Link from 'next/link';
 import { FaGoogle } from 'react-icons/fa'; // For the Google icon
@@ -14,7 +14,7 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const router = useRouter(); 
+  const router = useRouter();
   const { user, loading } = useAuth();
   // Initialize Google Provider
   const googleProvider = new GoogleAuthProvider();
@@ -38,7 +38,7 @@ export default function Login() {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-     // redirect('/'); // Redirect after successful login
+      // redirect('/'); // Redirect after successful login
       router.push('/')
     } catch (error) {
       setError(error.message); // Handle login errors
@@ -57,7 +57,7 @@ export default function Login() {
 
   return (
     <div className={cl.login_container}>
-     
+
       <div className={cl.login_box}>
         <h2 className={cl.title}>Login</h2>
         <form onSubmit={handleLogin} className={cl.form}>
@@ -67,7 +67,10 @@ export default function Login() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={cl.input_field}
+
           />
+          {error ? <p className='text-red-500 font-bold'>Wrong email or password</p> : ''}
+
           <input
             type="password"
             placeholder="Password"
@@ -80,14 +83,13 @@ export default function Login() {
 
         {/* Divider */}
         <div className={cl.divider}>OR</div>
-
         {/* Google Login Button */}
         <button className={cl.google_login} onClick={handleGoogleLogin}>
           <FaGoogle className={cl.google_icon} />
           Login with Google
         </button>
 
-        {error && <p className={cl.error}>{error}</p>}
+        {/* {error && <p className={cl.error}>{error}</p>} */}
 
         <p className={cl.register_link}>
           <Link href={"/signup"}>Dont have an account? Sign up now</Link>

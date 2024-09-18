@@ -32,12 +32,12 @@ export function AuthProvider({ children }) {
       if (user && user.uid) {
         const fetchedUserData = await getCurrentUserData(user.uid);
         setUserData(fetchedUserData);
-        console.log('Getting current user:', fetchedUserData);
+       // console.log('Getting current user:', fetchedUserData);
       } else {
-        console.log('User not logged in or UID not found.');
+       // console.log('User not logged in or UID not found.');
       }
     } catch (error) {
-      console.log('Cannot get user data:', error);
+      //console.log('Cannot get user data:', error);
     }
   };
 

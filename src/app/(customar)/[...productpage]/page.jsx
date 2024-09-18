@@ -66,7 +66,7 @@ function ProductDetail({ params }) {
       productID: productID,
       imageURL: product.imageUrl,
       name: product.name,
-      price: product.price,
+      price: totalPrice,
       kg: displayWeight,
       quantity: '',
     }
