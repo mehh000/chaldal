@@ -15,7 +15,7 @@ function Card({ product }) {
 
       <div className={cl.price_container}>
         <p className={cl.price}>Taka {product.price}</p>
-        <p className={cl.discount}>{product.discount} %5 off</p>
+        <p className={cl.discount}>{product.discount} % off</p>
       </div>
 
       <Link href={`/productpage/${product.id}`}>
