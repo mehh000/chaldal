@@ -1,0 +1,148 @@
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .backIcon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* h2 {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+  } */
+  
+  .profileContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .cameraIcon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .info {
+    width: 100%;
+  }
+  
+  .label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .saveButton, .cancelButton {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .saveButton {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  .saveButton:hover {
+    background-color: #45a049;
+  }
+  
+  .cancelButton {
+    background-color: #f44336; /* Red */
+    color: white;
+  }
+  
+  .cancelButton:hover {
+    background-color: #e53935;
+  }
+  
+  @media (max-width: 600px) {
+    .profileContainer {
+      padding: 15px;
+    }
+  
+    .header h2 {
+      font-size: 20px;
+    }
+  
+    .profileImage {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .cameraIcon {
+      font-size: 16px;
+    }
+  
+    .input {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .saveButton, .cancelButton {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  

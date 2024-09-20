@@ -1,0 +1,120 @@
+.settingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .backIcon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+
+  
+  .settingContent {
+    width: 100%;
+  }
+  
+  .menuItem {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .menuItem:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .menuIcon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .deleteOption {
+    color: red;
+    border-color: red;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .modal h3 {
+    margin-bottom: 10px;
+  }
+  
+  .modalButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .cancelButton, .confirmButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cancelButton {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .confirmButton {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .settingContainer {
+      padding: 15px;
+    }
+  
+ 
+  
+    .menuItem {
+      padding: 12px;
+    }
+  
+    .modalContent {
+      padding: 15px;
+    }
+  
+    .cancelButton, .confirmButton {
+      font-size: 14px;
+    }
+  }
+  

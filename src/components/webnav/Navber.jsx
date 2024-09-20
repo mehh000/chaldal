@@ -44,19 +44,19 @@ export default function Navber() {
 
           {/* Icons */}
           <div className={cl.icon_container}>
-            
+
             <Link href={'/search'}> <FaSearch /></Link>
             <div className={cl.cart_container}>
-              
-               <Link href={'/cart'}> <FaShoppingCart onClick={handleGetUser} /> </Link> 
+
+              <Link href={'/cart'}> <FaShoppingCart onClick={handleGetUser} /> </Link>
               {
-                userData?.cartList?.length ?  <div className={cl.Cart_lenth}>
-                {userData?.cartList?.length}
-               </div> : null
+                userData?.cartList?.length ? <div className={cl.Cart_lenth}>
+                  {userData?.cartList?.length}
+                </div> : null
               }
-              
+
             </div>
-          
+
 
             {user?.uid ? (
               <div className={cl.menu_container}>
@@ -66,10 +66,19 @@ export default function Navber() {
 
                 <div className={cl.drop_down}>
                   <div className={cl.drop_down_menus}>
-                    <p className={cl.drop_down_menu}>Account</p>
-                    <p className={cl.drop_down_menu}>Settings</p>
-                    <p className={cl.drop_down_menu}>Delivery</p>
-                    <p className={cl.drop_down_menu}>Address</p>
+                  <Link href={'/profile'}>
+                  <p className={cl.drop_down_menu}>Account</p>
+                  </Link>  
+                  <Link href={'/setting'}>
+                   <p className={cl.drop_down_menu}>Settings</p>
+                  </Link>
+                   
+                    <Link href={'/delivery'}>
+                      <p className={cl.drop_down_menu}>Delivery</p>
+                       </Link>
+                    <Link href={'/addressbook'}> 
+                     <p className={cl.drop_down_menu}>Address</p> 
+                     </Link>
                     <p className={cl.drop_down_menu}>Help</p>
                     <p className={cl.drop_down_menu} onClick={handleLogout}>Logout</p>
                   </div>

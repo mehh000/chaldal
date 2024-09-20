@@ -40,6 +40,7 @@ export default function Signup() {
         checkoutList: [],
         addressList: [],
         userSearchList: [],
+        primaryAddress: [],
       });
 
      // redirect('/');

@@ -4,9 +4,13 @@ import React, { useState } from 'react';
 import styles from './AddressPage.module.css';
 import { addAddressToUser } from '@/service/addAdress';
 import { useAuth } from '@/Context/AuthProvider';
+import Link from 'next/link';
+import { redirect, useRouter  } from 'next/navigation';
 
 const AddressPage = () => {
   const { user } = useAuth();
+  const [viewAddress, setViewAddress] = useState(true)
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -32,6 +36,7 @@ const AddressPage = () => {
       city: '',
       area: '',
       fullAddress: '',
+      status: 'secondary'
     });
   };
 
@@ -41,7 +46,8 @@ const AddressPage = () => {
       try {
         // Call the service to add the address to the user's addressList
         await addAddressToUser(user.uid, formData);
-        console.log('Address saved:', formData);
+       // console.log('Address saved:', formData);
+        router.push('/viewaddress');
       } catch (error) {
         console.error('Error saving address:', error);
       }
@@ -55,6 +61,21 @@ const AddressPage = () => {
       <div className={styles.header}>
         <button className={styles.backButton}>&#8592; Back</button>
         <h1 className={styles.title}>Add New Address</h1>
+        {
+          viewAddress ?
+          <Link href={'/viewaddress'}>   <div className="flex cursor-pointer items-center justify-center rounded-lg p-3 bg-slate-500 ">
+              <p className="text-white font-bold">
+                View Address
+              </p>
+            </div></Link> 
+            :
+            <Link href={'/viewaddress'}>     <div className="flex cursor-pointer items-center justify-center rounded-lg p-3 bg-blue-500 ">
+              <p className="text-white font-bold">
+                Add Address
+              </p>
+            </div></Link> 
+        };
+
       </div>
       <form className={styles.addressForm} onSubmit={handleSave}>
         <div className={styles.inputRow}>

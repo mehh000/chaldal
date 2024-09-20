@@ -14,6 +14,11 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true); // To handle loading state
   const [userData, setUserData] = useState(null); // Renamed from `currentUser` for clarity
+  const [deliveryProducts, setDeliveryProducts] = useState({
+    items: [],
+    totalPrice: 0,
+    deliveryPrice: 0,
+  });
 
   // Listen to authentication state changes
   useEffect(() => {
@@ -49,7 +54,7 @@ export function AuthProvider({ children }) {
   }, [user]);
 
   return (
-    <AuthContext.Provider value={{ user, loading, userData, handleGetUser }}>
+    <AuthContext.Provider value={{ user, loading, userData, handleGetUser,deliveryProducts,setDeliveryProducts }}>
       {children}
     </AuthContext.Provider>
   );
