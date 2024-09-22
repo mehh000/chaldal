@@ -5,23 +5,25 @@ import React, { useEffect, useState } from 'react';
 import cl from './style.module.css';
 import Image from 'next/image';
 import { getProductById } from '@/service/getproductbyid';
-import { addToCart} from '@/service/addtocart';
+import { addToCart } from '@/service/addtocart';
 import { useAuth } from '@/Context/AuthProvider';
 
 
 function ProductDetail({ params }) {
-const productID = {params}.params.id;
-// console.log({params}.params.id);
-// console.log(productID);
+  const productID = { params }.params.id;
+  // console.log({params}.params.id);
+  // console.log(productID);
 
 
   const [weight, setWeight] = useState(0);
+  const [quantity, setQuantity] = useState(0);
   const [priceBeforeDiscount, setPriceBeforeDiscount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
-  const { user,handleGetUser,userData } = useAuth();
+  const { user, handleGetUser, userData } = useAuth();
 
+  console.log('from the cart page', product);
 
 
   const pricePerKg = product.price; // Price per kilogram
@@ -62,10 +64,28 @@ const productID = {params}.params.id;
     }
   };
 
+  const handleQuantityChange = (e) => {
+    const inputQuantity = parseInt(e.target.value);
+    if (isNaN(inputQuantity) || inputQuantity <= 0) {
+      setQuantity(0);
+
+    } else {
+      setQuantity(inputQuantity);
+      const updatePrice = product.price * inputQuantity;
+      setTotalPrice(updatePrice.toFixed(2));
+
+    }
+  }
+
+  useEffect(() => {
+    console.log('Quantity cheak 2nd', quantity);
+  }, [handleQuantityChange, quantity])
+
+
   const displayWeight = weight >= 1000 ? `${(weight / 1000).toFixed(2)} kg` : `${weight} g`;
 
-  const handleADDtoCart = async()  =>{
-    const productData ={
+  const handleADDtoCart = async () => {
+    const productData = {
       productID: productID,
       imageURL: product.imageUrl,
       name: product.name,
@@ -73,12 +93,12 @@ const productID = {params}.params.id;
       kg: displayWeight,
       quantity: '',
     }
-        try {
-          await  addToCart(user.uid, productData)
-          handleGetUser()
-        } catch (error) {
-          
-        }
+    try {
+      await addToCart(user.uid, productData)
+      handleGetUser()
+    } catch (error) {
+
+    }
   }
 
 
@@ -131,19 +151,36 @@ const productID = {params}.params.id;
                   <p className={cl.discount}>Discount: {product.discount}%</p>
                 </div>
 
-                <div className={cl.quantity_container}>
-                  <div className={cl.net_weight_of_product_container}>
-                    <span className={cl.weight_label}>Enter Quantity (in grams):</span>
-                    <input
-                      type="number"
-                      className={cl.input}
-                      placeholder='Enter grams'
-                      onChange={handleWeightChange}
-                      min={0}
-                    />
-                    <span className={cl.amount_display}>{displayWeight}</span>
-                  </div>
-                </div>
+                {
+                  product.gram ?
+
+                    <div className={cl.quantity_container}>
+                      <div className={cl.net_weight_of_product_container}>
+                        <span className={cl.weight_label}>Enter Quantity (in grams):</span>
+                        <input
+                          type="number"
+                          className={cl.input}
+                          placeholder='Enter grams'
+                          onChange={handleWeightChange}
+                          min={0}
+                        />
+                        <span className={cl.amount_display}>{displayWeight}</span>
+                      </div>
+                    </div>
+                    :
+                    <div className={cl.quantity_container}>
+                      <div className={cl.net_weight_of_product_container}>
+                        <span className={cl.weight_label}>Enter Quantity :</span>
+                        <input
+                          type="number"
+                          className={cl.input}
+                          placeholder='Quantity'
+                          onChange={handleQuantityChange}
+                          min={0}
+                        />
+                        <span className={cl.amount_display}>Quantity</span>
+                      </div>
+                    </div>}
 
                 {totalPrice > 0 && (
                   <div className={cl.total_price_container}>
@@ -152,6 +189,10 @@ const productID = {params}.params.id;
                     <span className={cl.total_price_discounted}>Taka {totalPrice}</span>
                   </div>
                 )}
+
+
+
+
 
                 <button className={cl.add_to_cart_btn} onClick={handleADDtoCart} >Add to Cart</button>
               </div>

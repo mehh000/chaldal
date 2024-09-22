@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react'
 import cl from './Products.module.css'
 import Link from 'next/link';
 import { getAllProducts } from '@/service/getproducts';
+import { deleteProduct } from '@/service/deleteProductdb';
 
 function Products() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,23 +15,30 @@ function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const productsData = await getAllProducts();
-        setProducts(productsData);
-        console.log(
-          productsData
-        );
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const fetchProducts = async () => {
+    try {
+      const productsData = await getAllProducts();
+      setProducts(productsData);
+      console.log(
+        productsData
+      );
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchProducts();
   }, []);
+
+  const handleDelete = async (id) => {
+    await deleteProduct(id);
+    fetchProducts();
+    console.log('geting', id);
+  }
+
 
   if (loading) {
     return <p>Loading products...</p>;
@@ -71,11 +79,11 @@ function Products() {
 
       {/* Responsive Product List */}
       <div className={cl.productList}>
- 
 
-{products.map(product => (
-    <ProductCard key={product.id} product={product}  />
-))}
+
+        {products.map(product => (
+          <ProductCard key={product.id} product={product} handleDelete={handleDelete} />
+        ))}
 
 
         {/* Add more <ProductCard /> components as needed */}

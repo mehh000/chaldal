@@ -15,7 +15,6 @@ const Cart = () => {
   const [selectedProductPrice, setSelectedProductPrice] = useState([]);
 
 
-
   // Calculate total price
   const totalPrice = selectedProductPrice.reduce((sum, price) => sum + Number(price), 0);
 
