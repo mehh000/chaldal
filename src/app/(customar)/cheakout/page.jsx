@@ -21,7 +21,7 @@ function Checkout() {
   },[])
 
   const [cheakout, setCheakout] = useState({});
-   console.log('from the cheakout:',deliveryProducts);
+  // console.log('from the cheakout:',deliveryProducts);
   const handleCheakout = async () => {
     const finalupdate = {
       ...cheakout, // Spread the current checkout state
@@ -101,9 +101,8 @@ function Checkout() {
             </div>
           </div>
         </div>
-
-        {/* adresss view */}
-        <div className="p-2 bg-white rounded-lg border-red-200 border-2 mt-3">
+{
+  userData?.primaryAddress ?         <div className="p-2 bg-white rounded-lg border-red-200 border-2 mt-3">
           <div className="flex items-center justify-between gap-4">
             <h2 className="text-lg font-bold">{userData?.primaryAddress[0].name}</h2>
 
@@ -118,7 +117,12 @@ function Checkout() {
                 chnage
               </div> </Link>
           </div>
+        </div> : <div className=" p-3 w-full border-red-400 border-2 rounded-lg">
+        <p className="">address not found</p>
         </div>
+}
+        {/* adresss view */}
+
 {/* 
         {
           deliveryProducts  ? <p className="text-green-500">have prodcucts: {deliveryProducts} </p> : <p className="text-red-500">dont have products</p>

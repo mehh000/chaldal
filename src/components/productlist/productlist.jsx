@@ -5,7 +5,7 @@ import cl from './style.module.css';
 import Card from './card';
 import { getAllProducts } from '@/service/getproducts';
 
-function ProductList() {
+function ProductList() { 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -14,9 +14,9 @@ function ProductList() {
       try {
         const productsData = await getAllProducts();
         setProducts(productsData);
-        console.log(
-          productsData
-        );
+        // console.log(
+        //   productsData
+        // );
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
@@ -29,7 +29,7 @@ function ProductList() {
   return (
     <>
 
-      <h1 className='text-3xl text-center ftextont-bold sm:text-5xl' >New Products</h1>
+      <h1 className='text-3xl text-center font-bold sm:text-5xl' >New Products</h1>
       <div className={cl.list_container}>
       
 

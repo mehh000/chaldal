@@ -22,6 +22,8 @@ export default function Navber() {
     }
   };
 
+  //console.log('from the navber',userData.imageUrl);
+
   return (
     <>
       <div className={cl.navbox}>
@@ -45,7 +47,7 @@ export default function Navber() {
           {/* Icons */}
           <div className={cl.icon_container}>
 
-            <Link href={'/search'}> <FaSearch /></Link>
+            <Link href={'/search/all'}> <FaSearch /></Link>
             <div className={cl.cart_container}>
 
               <Link href={'/cart'}> <FaShoppingCart onClick={handleGetUser} /> </Link>
@@ -61,7 +63,11 @@ export default function Navber() {
             {user?.uid ? (
               <div className={cl.menu_container}>
                 <div className={cl.user_icon}>
-                  <FaUserAlt />
+                 {
+                  userData?.imageUrl ? <div className=" rounded-full">
+                    <Image src={userData.imageUrl} alt='profileIcon' className=' rounded-full' priority width={45} height={40} />
+                  </div> : <FaUserAlt />
+                 } 
                 </div>
 
                 <div className={cl.drop_down}>
@@ -79,7 +85,9 @@ export default function Navber() {
                     <Link href={'/addressbook'}> 
                      <p className={cl.drop_down_menu}>Address</p> 
                      </Link>
+                   <Link href={'/contact-us'}>
                     <p className={cl.drop_down_menu}>Help</p>
+                   </Link>
                     <p className={cl.drop_down_menu} onClick={handleLogout}>Logout</p>
                   </div>
                 </div>
@@ -93,20 +101,21 @@ export default function Navber() {
         </div>
       </div>
 
-      {/* mini search bar */}
+      {/* mini search bar
       <div className={cl.mini_search_contain}>
         <div className={cl.mini_search}>
-          <input
+        <Link href={'/search/all'}>  <input
             className={cl.search_input}
             placeholder='Search anything...'
-          />
-          <Link href={'/search'}>
+            
+          /> </Link>
+          <Link href={'/search/all'}>
             <div className={cl.search_icon_container}>
               <FaSearch className={cl.search_icon} />
             </div>
           </Link>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

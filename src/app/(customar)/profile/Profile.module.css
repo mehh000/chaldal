@@ -46,6 +46,7 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid rgb(221, 54, 54);
   }
   
   .cameraIcon {

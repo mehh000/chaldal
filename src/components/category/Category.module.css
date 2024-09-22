@@ -21,6 +21,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
 }
 
 .cat_card{
@@ -29,6 +30,7 @@
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
+    width: fit-content;
     border: 2px solid rgba(220, 220, 220, 0.521);
 }
 

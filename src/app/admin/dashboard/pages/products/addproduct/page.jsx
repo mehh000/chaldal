@@ -24,7 +24,7 @@ function AddProduct() {
   });
   const [loading, setLoading] = useState(false); // Add loading state
 
-  const categoryOptions = ['Vegetable', 'Meat', 'Soft Drinks', 'Snacks', 'Fruits', 'Milk', 'Desserts', 'Daily Use', 'Hot Deals'];
+  const categoryOptions = ['vegetable', 'meat', 'soft-drinks', 'snacks', 'fruits', 'milk', 'desserts', 'daily-use', 'hot-deals'];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

@@ -17,7 +17,7 @@ function Advertisement() {
     const fetchHeroData = async () => {
       try {
         const heroData = await gethero();
-        console.log("Fetched hero data: ", heroData); // Check if data is being fetched
+      //  console.log("Fetched hero data: ", heroData); // Check if data is being fetched
         setImages(heroData);
       } catch (error) {
         console.error("Error fetching hero data: ", error);

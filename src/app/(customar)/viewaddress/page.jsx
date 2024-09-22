@@ -20,7 +20,7 @@ function ViewAddress() {
 
       // Call the service function to add the address to the user's primaryAddress array
       await addToPrimaryAddress(userData.uid, addressData);
-      console.log('Address saved successfully!');
+     // console.log('Address saved successfully!');
     } catch (error) {
       console.error('Error saving address:', error);
     }
